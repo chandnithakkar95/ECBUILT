@@ -1,0 +1,1 @@
+<span style="color: rgb(140, 140, 140); font-family: 'Helvetica Neue', helvetica, sans-serif; font-size: 13px; line-height: 20px; background-color: rgb(247, 247, 247);">This is a text widget, you can add anything you’d like to this area. Maybe a little more info about your organization or perhaps even a bit of html.</span>
