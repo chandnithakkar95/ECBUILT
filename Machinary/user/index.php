@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<?php
-include("config/config.php");
-?>
+<!--
+	Metronic by TEMPLATE STOCK
+	templatestock.co @templatestock
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en-US">
+<!--<![endif]-->
 <head>
 
 <!-- META DATA -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+
 
 <!-- Title -->
-<title>Shppl | Welcome </title>
-
+<title>Metronic Free HTML5 Responsive Template | Template Stock
+</title>
 
 
 <!-- CSS Global Compulsory -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/style.css" >
+<link rel="stylesheet" href="css/style.css">
 
 <!-- CSS Implementing Plugins -->
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
@@ -30,9 +39,13 @@ include("config/config.php");
 <link rel="stylesheet" type="text/css" href="css/menu.css" />
 <link rel="stylesheet" type="text/css" href="css/sidebar.css" />
 
-<!-- Fonts -->	
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,900' rel='stylesheet' type='text/css'>
+<!-- Fonts -->
+<link
+	href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,300,700&amp;subset=latin,latin-ext'
+	rel='stylesheet' type='text/css'>
+<link
+	href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,900'
+	rel='stylesheet' type='text/css'>
 
 
 <!-- JS -->
@@ -51,6 +64,7 @@ include("config/config.php");
 
 </head>
 <body class="image-background">
+
 	<center>
 <div class="container-fluid">
 	

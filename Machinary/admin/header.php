@@ -7,7 +7,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="dashboard.php"><span>DigitalSMEs Media</span></a>
+				<a class="brand" href="dashboard.php"><span>SHPPL ADMIN</span></a>
 								
 				<!-- start: Header Menu -->
 				<div class="nav-no-collapse header-nav">

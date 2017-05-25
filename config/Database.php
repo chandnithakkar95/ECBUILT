@@ -10,7 +10,7 @@ var $server   = "localhost"; //database server
 var $user     = "root"; //database user name
 var $pass     = ""; //database login password
 var $database = "ofs" //database name
-var $pre      = ""; //table prefix
+var $pre=''; //table prefix
 
 
 

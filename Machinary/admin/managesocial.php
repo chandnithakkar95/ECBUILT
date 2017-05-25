@@ -4,7 +4,7 @@
 	
 	<!-- start: Meta -->
 	<meta charset="utf-8">
-	<title>DigitalSmesMedia | Admin</title>
+	<title>SHPPL | Admin</title>
 	<meta name="description" content="Bootstrap Metro Dashboard">
 	<meta name="author" content="Dennis Ji">
 	<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
@@ -22,49 +22,34 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
     <script src="js/admin.js" type="text/javascript"></script>
 	<!-- end: CSS -->
-	
-
 	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
 	  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<link id="ie-style" href="css/ie.css" rel="stylesheet">
 	<![endif]-->
-	
 	<!--[if IE 9]>
 		<link id="ie9style" href="css/ie9.css" rel="stylesheet">
 	<![endif]-->
-		
 	<!-- start: Favicon -->
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<!-- end: Favicon -->
-	
-		
-		
-		
 </head>
-
 <body>
 		<!-- start: Header -->
 	<?php include("config/config.php"); 
 	include("header.php");?>
-	
 		<div class="container-fluid-full">
 		<div class="row-fluid">
-				
 			<!-- start: Main Menu -->
 			<?php include("menu.php");?>
-			
 			<noscript>
 				<div class="alert alert-block span10">
 					<h4 class="alert-heading">Warning!</h4>
 					<p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
 				</div>
 			</noscript>
-			
 			<!-- start: Content -->
 			<div id="content" class="span10">
-			
-			
 			<ul class="breadcrumb">
 				<li>
 					<i class="icon-home"></i>
@@ -87,8 +72,12 @@
 						<table class="table table-striped table-bordered bootstrap-datatable datatable">
 						  <thead>
 							  <tr>
-								  <th>Social Name</th>
-                                  <th>Social Image</th>
+								  <th>Company Name</th>
+                                  <th>Profile Image</th>
+								  <th>Cover Image</th>
+                                  <th>About Us</th>
+								  <th>Achivements</th>
+								  <th>Avchiments PICS</th>
 								  <th>Actions</th>
 							  </tr>
 						  </thead>   
@@ -99,13 +88,17 @@
 					{?>
 							<tr id="row_id<?php echo $display['ID'];?>">
 							
-                                <td><?php echo $display['Socialname'];?></td>
-                                <td><img src="<?php echo $display['Socialimage']; ?>" height="50" width="50" /></td>
+                                <td><?php echo $display['C_Name'];?></td>
+                                <td><img src="<?php echo $display['P_Image']; ?>" height="50" width="50" /></td>
+                                <td><img src="<?php echo $display['C_Image']; ?>" height="50" width="50" /></td>
+								<td><?php echo $display['About_Us'];?></td>	
+								<td><?php echo $display['Achivements'];?></td>	
+								<td><img src="<?php echo $display['A_Image']; ?>" height="50" width="50" /></td>
 								<td class="center">
 									<a class="btn btn-info" href="addsocial.php?action=edit&id=<?php echo $display['ID'];?>" title="Edit">
 										<i class="halflings-icon white edit"></i>  
 									</a>
-									<a class="btn btn-danger" href="javascript:delete_record('social','<?php echo $display['ID'];?>')"  onclick="return confirm('Are You Sure Delete This Record?');" title="Delete">
+									<a class="btn btn-danger" href="javascript:delete_record('social','<?php echo $display['ID'];?>','ID')"  onclick="return confirm('Are You Sure Delete This Record?');" title="Delete">
 										<i class="halflings-icon white trash"></i> 
 									</a>
 								</td>

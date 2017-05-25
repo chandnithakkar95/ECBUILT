@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<?php
-   include("config/config.php");
-?>
-<html lang="en" >
+<?php include 'header.php';?>
 <head>
     <script type="text/javascript">
       $(document).ready( function (e) {
@@ -25,138 +22,7 @@ if (isset ($_POST['add'] )) {
 	}
 }
 ?>
-<!-- META DATA -->
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="content-type" content="text/html;charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<!-- Title -->
-<title>Shppl</title>
-
-
-
-<!-- CSS Global Compulsory -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/style.css" >
-
-<!-- CSS Implementing Plugins -->
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-<link rel="stylesheet" type="text/css" href="css/ionicons.min.css" />
-<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
-<link rel="stylesheet" type="text/css" href="css/flexslider.css" />
-<link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
-<link rel="stylesheet" type="text/css" href="css/owl.theme.css" />
-<link rel="stylesheet" type="text/css" href="css/vegas.min.css" />
-<link rel="stylesheet" type="text/css" href="css/menu.css" />
-<link rel="stylesheet" type="text/css" href="css/sidebar.css" />
-
-<!-- Fonts -->	
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,900' rel='stylesheet' type='text/css'>
-
-
-<!-- JS -->
-<script type="text/javascript" src="js/modernizr.js"></script>
-<script type="text/javascript" src="js/snap.svg-min.js"></script>
-
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<script src="http://webnextbd.net/demo/js/respond.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 11]>
-<link rel="stylesheet" type="text/css" href="http://webnextbd.net/demo/css/ie.css">
-<![endif]-->
-
-</head>
-
-<body class="image-background">
-<header id="header">
-      <div class="header_top">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="contactinfo">
-                <ul class="nav nav-pills">
-                					<!-- contact details-->
-							  </ul>
-						  </div>
-            </div>
-					  <div class="col-sm-6">
-              <div class="social-icons pull-right">
-                <ul class="nav navbar-nav">
-								  <li><a href="http://facebook"><i class="fa fa-facebook"></i></a></li>
-						      <li><a href="http://twitter"><i class="fa fa-twitter"></i></a></li>
-					        <li><a href="http://linkedin"><i class="fa fa-linkedin"></i></a></li>
-			            <li><a href="http://dribbble"><i class="fa fa-dribbble"></i></a></li>
-	                <li><a href="http://googleplus"><i class="fa fa-google-plus"></i></a></li>
-						    </ul>
-		          </div>
-            </div>
-		      </div>
-        </div>
-      </div>
-      <div class="header-middle"><!--header-middle-->
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4">
-			        <div class="logo pull-left">
-	              <a href="index.php"><img class="img-responsive" src="images/logo (2).png" data-at2x="images/logo (2).png" alt="Logo" />
-</a>
-				      </div>
-              <div class="btn-group pull-right">
-                <div class="btn-group"></div>
-				        <div class="btn-group"></div>
-              </div>
-            </div>
-            <div class="col-sm-8">
-              <div class="shop-menu pull-right">
-                <ul class="nav navbar-nav">
-						      <li><a href="checkout.php"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-				          <li><a href="cart.php"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-				        </ul>
-					    </div>
-		        </div>
-		      </div>
-		    </div>
-      </div><!--/header-middle-->
-      <div class="header-bottom">
-        <div class="container">
-			    <div class="row">
-            <div class="col-sm-9">
-			        <div class="navbar-header">
-						    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-		              <span class="sr-only">Toggle navigation</span>
-							    <span class="icon-bar"></span>
-							    <span class="icon-bar"></span>
-							    <span class="icon-bar"></span>
-						    </button>
-              </div>
-					    <div class="mainmenu pull-left">
-						    <ul class="nav navbar-nav collapse navbar-collapse">
-                  <li><a href="ofsindex.php" class="active">Home</a></li>
-                  <li class="dropdown"><a  href="#">Shop<i class="faangledown"></i></a>
-                    <ul role="menu" class="sub-menu">
-                      <li><a href="shop.php">Products</a></li>
-						          <li><a href="checkout.php">Checkout</a></li>
-							        <li><a href="index (2).php?page=product&action=cart">Cart</a></li>
-                    </ul>
-                  </li>
-							    <li><a href="contact-us.php">Contact</a></li>
-				        </ul>
-					    </div>
-		        </div>
-				    <div class="col-sm-3"> 
-					    <div class="search_box pull-right">
-						    <input type="search" name="search" id="search" placeholder="Search"/>
-					    </div>
-				    </div>
-		      </div>
-		    </div>
-	    </div><!--/header-bottom-->
-    </header><!--/header-->
 	  <!-- <section id="slider"><!--slider
 		  <div class="container">
 			  <div class="row">
@@ -204,7 +70,7 @@ if (isset ($_POST['add'] )) {
 				  <div class="col-sm-3">
 				    <div class="left-sidebar">
 					    <h2>Category</h2>
-              <div class="panel-group  category-products" id="accordian">
+              <div class="panel-group panel category-products" id="accordian">
                 <?php
                 $table="category";
                 $where='1=1';
@@ -249,7 +115,7 @@ if (isset ($_POST['add'] )) {
             </div>
           </div>
 		  <form method="post">
-	        <div class="col-sm-9 padding-right">
+	        <div class="col-sm-9 padding-right panel">
             <div class="features_items"><!--Other furniture_items-->
 						  <h2 class="title text-center"></h2>
               <?php
@@ -294,157 +160,9 @@ if (isset ($_POST['add'] )) {
   					</div>
                   </div>
                 </div>
-				<div class="panel-group category-products"><?php
-					$table4="Feedback";
-					$where4="Prod_ID=".$display2['Prod_ID'];
-					$result4=$Admin->display_record($table4,$where4);
-                    while($display4=mysql_fetch_array($result4)){ ?>
-					<h2><?php $tb="customer";
-							  $whre="Cust_ID".$display2['Cust_ID'];					
-							  $re=$Admin->display_record($tb,$whre);
-							  while($dis=mysql_fetch_array($re)){
-							  echo $dis['Cust_Name'];
-							  }
-							  ?></h2>
-					<h2> <?php echo $display4['Description']; ?></h2>
-					<?php }?>
-				</div>
-				<div class="col-sm-2 productinfo text-center">
-                          <h2>Feedback:</h2>
-                        </div>
-                        <div align="right"class="col-sm-12">
-                          <p><textarea rows=5 cols=20 name="feedback" placeholder="Give Your Feedback........"></textarea>
-                            <br> <br><button class="btn btn-feedback " href="#" name="add" > Feedback</button>  										  </div>
+				
                 <?php } ?>
               </div>
             </div>
           </div>
-				  <div class="recommended_items">
-						<h2 class="title text-center">recommended items</h2>
-					    <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
-					      <div class="carousel-inner">
-						      <div class="item active">
-							      <div class="col-sm-4">
-									    <div class="product-image-wrapper">
-										    <div class="single-products">
-										      <div class="productinfo text-center">
-											      <img src="image/home/pic3 - Copy.jpg" alt="" />
-											      <h2>Rs. 16,000</h2>
-										        <a href="#" class="btn btn-default add-to-cart">
-                              <i class="fa fa-shopping-cart"></i>Add to cart
-                            </a>
-											    </div>
-										    </div>
-									    </div>
-									  </div>
-									  <div class="col-sm-4">
-									    <div class="product-image-wrapper">
-										    <div class="single-products">
-											    <div class="productinfo text-center">
-											      <img src="image/home/images-43.jpeg" alt="" />
-												    <h2>$56</h2>
-												    <a href="#" class="btn btn-default add-to-cart">
-                              <i class="fa fa-shopping-cart"></i>Add to cart
-                            </a>
-											    </div>
-										    </div>
-										  </div>
-									  </div>
-									  <div class="col-sm-4">
-										  <div class="product-image-wrapper">
-											  <div class="single-products">
-												  <div class="productinfo text-center">
-													  <img src="image/home/p7.jpg" alt="" />
-													  <h2>$56</h2>
-													  <a href="#" class="btn btn-default add-to-cart">
-                              <i class="fa fa-shopping-cart"></i>Add to cart
-                            </a>
-											    </div>
-										    </div>
-									    </div>
-								    </div>
-						      </div>
-							    <div class="item">
-								    <div class="col-sm-4">
-									    <div class="product-image-wrapper">
-											  <div class="single-products">
-												  <div class="productinfo text-center">
-													  <img src="image/home/11_1456252203416.jpg" alt="" />
-												    <h2>$56</h2>
-												    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart
-                            </a>
-											    </div>
-										    </div>
-									    </div>
-									  </div>
-									  <div class="col-sm-4">
-										  <div class="product-image-wrapper">
-											  <div class="single-products">
-												  <div class="productinfo text-center">
-											      <img src="image/home/4_1456251696488.jpg" alt="" />
-												    <h2>$56</h2>
-												    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart
-                            </a>
-											    </div>
-										    </div>
-									    </div>
-								    </div>
-									  <div class="col-sm-4">
-										  <div class="product-image-wrapper">
-											  <div class="single-products">
-												  <div class="productinfo text-center">
-													  <img src="image/home/p6.jpg" alt="" />
-											      <h2>$56</h2>
-												    <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											    </div>
-										    </div>
-										  </div>
-									  </div>
-								  </div>
-								</div>
-							  <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
-								  <i class="fa fa-angle-left"></i>
-							  </a>
-                <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
-								  <i class="fa fa-angle-right"></i>
-							  </a>
-						  </div>
-					  </div>
-			    </div>
-		    </div>
-		  </div>
-	  </section>
-	  <footer id="footer"><!--Footer-->
-		  <div class="footer-bottom">
-			  <div class="container">
-				  <div class="row">
-					  <p class="pull-left">Copyright © 2015 StrongHold Packaging  . All rights reserved.</p>
-					  <p class="pull-right">Designed by <span><a target="_blank" href="http://www.thereasonablesinfotect.in/">The Reasonables Infotect</a></span></p>
-				  </div>
-			  </div>
-		  </div>
-	  </footer>
-
-<!-- JS -->
-<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/retina.min.js"></script>
-<script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
-<!-- Maps -->
-
-<!--<script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
-<script type="text/javascript" src="js/maps.js"></script>-->
-<!-- /Maps -->
-<script type="text/javascript" src="js/jquery.countdown.min.js"></script>
-<script type="text/javascript" src="js/jquery.parallaxify.min.js"></script>
-<script type="text/javascript" src="js/jquery.particleground.min.js"></script>
-<script type="text/javascript" src="js/vegas.min.js"></script>
-<script type="text/javascript" src="js/trianglify.min.js"></script>
-<script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>
-<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
-<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="js/owl.carousel.min.js"></script>
-<script type="text/javascript" src="js/jquery.appear.js"></script>
-<script type="text/javascript" src="js/classie.js"></script>
-<script type="text/javascript" src="js/sidebar.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+<?php include 'footer.php';?>

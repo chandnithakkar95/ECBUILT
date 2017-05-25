@@ -18,16 +18,16 @@ if(isset($_POST['AddProduct']))
 		foreach($_REQUEST['prodCheck'] as $val){
 			$QtyData['Q_name']=$_REQUEST['prodCheck'][$i];
 			$QtyData['price']=$_REQUEST['price'][$i];
-			$QtyData['Prod_ID']=$prod_id;
+			$QtyData['prod_id']=$prod_id;
 			$Admin->insert_record('quality',$QtyData);
 			$i++;
 		}
-	}else{
+	}	
 		$QtyData['Q_name']="default";
 		$QtyData['price']=$_POST['price1'];
-		$QtyData['Prod_ID']=$prod_id;
+		$QtyData['prod_id']=$prod_id;
 		$Admin->insert_record('quality',$QtyData);
-	}
+	
 	//$name=$_FILES["ProductImage"]["name"];
 	//$tname=$_FILES["ProductImage"]["tmp_name"];
 	//$path="image/product/$name";
@@ -56,8 +56,8 @@ if(isset($_POST['EditProduct']))
 	$where = "prod_id =".$_GET['id'];
 	$Admin->update_record('product',$data,$where);
 		$i=0;
-		$Admin->display_record('quality','prod_id=$_GET["id"]');
-		foreach($_REQUEST['prdCheck'] as $val){
+		$res=$Admin->display_record('quality','prod_id=$_GET["id"]');
+					foreach($_REQUEST['prdCheck'] as $val){
 			$QtyData['Q_name']=$_REQUEST['prdCheck'][$i];
 			$QtyData['price']=$_REQUEST['pice'][$i];
 			$where = "Prod_ID =".$_GET['id'];
@@ -367,7 +367,7 @@ if(isset($_POST['EditProduct']))
 							</div>--> 
 							<?php 
 							$table1="quality";
-							$where="Prod_ID=".$display['Prod_ID'];
+							$where="prod_id=".$_GET['id'];
 							$re1=$Admin->display_record($table1,$where); ?>
 							<div class="control-group" id="QtlySh">
                             <?php

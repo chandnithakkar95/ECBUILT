@@ -9,7 +9,7 @@
 	
 	<!-- start: Meta -->
 	<meta charset="utf-8">
-	<title>DigitalSmesMedia | Admin</title>
+	<title>SHPPL | Admin</title>
 	<meta name="description" content="Bootstrap Metro Dashboard">
 	<meta name="author" content="Dennis Ji">
 	<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
@@ -74,20 +74,20 @@
 				
 				<div class="span3 statbox purple" onTablet="span6" onDesktop="span3">
 					<div class="boxchart">5,6,7,2,0,4,2,4,8,2,3,3,2</div>
-                     <?php $count_category = $Admin->count_row('category','Categorystatus=1');?>
+                     <?php $count_category = $Admin->count_row('category','Cate_Status=1');?>
 					<div class="number"><?php echo $count_category[0]+1; ?><i class="icon-arrow-up"></i></div>
                    <div class="title">Category</div>
 					<div class="footer">
-						<a href="managecategory.php"> read full report</a>
+						<a href="managecategory.php"> Look into..</a>
 					</div>	
 				</div>
 				<div class="span3 statbox green" onTablet="span6" onDesktop="span3">
 					<div class="boxchart">1,2,6,4,0,8,2,4,5,3,1,7,5</div>
-                    <?php $count_subcategory = $Admin->count_row('subcategory','Subcategorystatus=1');?>
+                    <?php $count_subcategory = $Admin->count_row('sub_category','Sub_Cate_Status=1');?>
 					<div class="number"><?php echo $count_subcategory[0]; ?><i class="icon-arrow-up"></i></div>
 					<div class="title">Sub-Category</div>
 					<div class="footer">
-						<a href="managesubcategory.php"> read full report</a>
+						<a href="managesubcategory.php"> Look into..</a>
 					</div>
 				</div>
 				<div class="span3 statbox blue noMargin" onTablet="span6" onDesktop="span3">
@@ -96,7 +96,7 @@
 					<div class="number"><?php echo $count_gallery[0]; ?><i class="icon-arrow-up"></i></div>
 					<div class="title">Gallery</div>
 					<div class="footer">
-						<a href="managegallery.php"> read full report</a>
+						<a href="managegallery.php"> Look into..</a>
 					</div>
 				</div>
 				<div class="span3 statbox yellow" onTablet="span6" onDesktop="span3">
@@ -105,36 +105,18 @@
 					<div class="number"><?php echo $count_slider[0]; ?><i class="icon-arrow-down"></i></div>
 					<div class="title">Slider</div>
 					<div class="footer">
-						<a href="manageslider.php"> read full report</a>
+						<a href="manageslider.php"> Look into..</a>
 					</div>
 				</div>	
 				
 			</div>		
 	
-			<div class="row-fluid">	
-
-				<a class="quick-button metro yellow span2" href="managepage.php">
-					<i class="icon-group"><?php $count_page = $Admin->count_row('page','Pagestatus=1');?></i>
-					<p>Pages</p>
-					<span class="badge"><?php echo $count_page[0]; ?></span>
-				</a>
-			
+			<div class="row-fluid">				
 				<a class="quick-button metro green span2" href="manageproduct.php">
 					<i class="icon-barcode"><?php $count_product = $Admin->count_row('product','Productstatus=1');?></i>
 					<p>Products</p>
 					<span class="badge"><?php echo $count_product[0]; ?></span>
 				</a>
-				<a class="quick-button metro pink span2" href="managemessage.php">
-					<i class="icon-envelope"><?php $count_message = $Admin->count_row('message','1');?></i>
-					<p>Messages</p>
-					<span class="badge"><?php echo $count_message[0]; ?></span>
-				</a>
-                <a class="quick-button metro red span2" href="managemenu.php">
-                <i class="icon-calendar"><?php $count_menu = $Admin->count_row('menu','1');?></i>
-					<p>Menu</p>
-					<span class="badge"><?php echo $count_menu[0]; ?></span>
-				</a>
-				
 				<div class="clearfix"></div>
 								
 			</div><!--/row-->

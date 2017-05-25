@@ -1,45 +1,55 @@
 <?php
 include('config/config.php');
-
-if(isset($_POST['AddSocial']))
-{
-	$data['Socialname'] = $_POST['SocialName'];
-	$data['Sociallink'] = $_POST['SocialLink'];
-	$data['Socialimage'] = "image/social/".$_FILES['SocialImage']['name'];
-	
-	$Admin->insert_record('social',$data);
-	
-	$name=$_FILES["SocialImage"]["name"];
-	$tname=$_FILES["SocialImage"]["tmp_name"];
-	$path="image/social/$name";
-	move_uploaded_file($tname,$path);
-	header('Location:addsocial.php');
-}
 if(isset($_POST['EditSocial']))
 {
-	$img = $_POST['img'];
-	$data['Socialname'] = $_POST['SocialName'];
-	$data['Sociallink'] = $_POST['SocialLink'];
-	if($_FILES ['SocialImage'] ['name']=="")
+	$pimg = $_POST['pimg'];	
+	$data['C_Name'] = $_POST['SocialName'];
+	$data['About_Us'] = $_POST['SocialLink'];
+	if($_FILES ['PImage'] ['name']=="")
 	{
-			$data['Socialimage'] = $img;
+			$data['P_Image'] = $pimg;
 	}
 	else
 	{
-		$data['Socialimage'] = "image/social/".$_FILES['SocialImage']['name'];
-		$name=$_FILES["SocialImage"]["name"];
-		$tname=$_FILES["SocialImage"]["tmp_name"];
-		$path="image/social/$name";
+		$data['P_Image'] = "../admin/image/social/".$_FILES['PImage']['name'];
+		$name=$_FILES["PImage"]["name"];
+		$tname=$_FILES["PImage"]["tmp_name"];
+		$path="../admin/image/social/$name";
+		move_uploaded_file($tname,$path);
+	}
+	$cimg = $_POST['cimg'];
+	if($_FILES ['CImage'] ['name']=="")
+	{
+			$data['C_Image'] = $cimg;
+	}
+	else
+	{
+		$data['C_Image'] = "../admin/image/social/".$_FILES['CImage']['name'];
+		$name=$_FILES["CImage"]["name"];
+		$tname=$_FILES["CImage"]["tmp_name"];
+		$path="../admin/image/social/$name";
 		move_uploaded_file($tname,$path);
 	
 	}
-
- 	$where = "ID = '".$_GET['id']."'";
+	
+	$aimg = $_POST['aimg'];
+	if($_FILES ['AImage'] ['name']=="")
+	{
+			$data['A_Image'] = $aimg;
+	}
+	else
+	{
+		$data['A_Image'] = "../admin/image/social/".$_FILES['AImage']['name'];
+		$name=$_FILES["AImage"]["name"];
+		$tname=$_FILES["AImage"]["tmp_name"];
+		$path="../admin/image/social/$name";
+		move_uploaded_file($tname,$path);
+	
+	}
+	$data['Achivements']=$_POST['Achivments'];
+ 	$where = "ID =".$_GET['id'];
 	$Admin->update_record('social',$data,$where);
-	
 	header('Location:managesocial.php');
-	
-	
 }?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +57,7 @@ if(isset($_POST['EditSocial']))
 	
 	<!-- start: Meta -->
 	<meta charset="utf-8">
-	<title>DigitalSmesMedia | Admin</title>
+	<title>SHPPL | Admin</title>
 	<meta name="description" content="Bootstrap Metro Dashboard">
 	<meta name="author" content="Dennis Ji">
 	<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
@@ -113,46 +123,14 @@ if(isset($_POST['EditSocial']))
 			<div class="row-fluid sortable">
 				<div class="box span12">
 					<div class="box-header" data-original-title>
-						<h2><i class="halflings-icon edit"></i><span class="break"></span>Add Social</h2>
+						<h2><i class="halflings-icon edit"></i><span class="break"></span>Edi Social</h2>
 						<div class="box-icon">
 							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
 							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
 						</div>
 					</div>
 					<div class="box-content">
-                    <?php if(!isset($_GET['action'])) 
-					{?>
-						<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
-						  <fieldset>
-                          
-                               <div class="control-group">
-								<label class="control-label" for="focusedInput">Social Name</label>
-								<div class="controls">
-								  <input class="input-xlarge focused" id="focusedInput" type="text" name="SocialName">
-								</div>
-							  </div>
-                              
-                              <div class="control-group">
-								<label class="control-label" for="focusedInput">Social Link</label>
-								<div class="controls">
-								  <input class="input-xlarge focused" id="focusedInput" type="text" name="SocialLink">
-								</div>
-							  </div>
-							
-                            <div class="control-group">
-							  <label class="control-label" for="fileInput"> Social Image<label>
-							  <div class="controls">
-								<input class="input-file uniform_on" id="fileInput" type="file" name="SocialImage">
-							  </div>
-							</div> 
-							<div class="form-actions">
-							  <button type="submit" class="btn btn-primary" name="AddSocial">Add Social</button>
-							  <button type="reset" class="btn">Cancel</button>
-							</div>
-						  </fieldset>
-						</form>
-                           <?php }
-			
+                <?php
 			if(isset($_GET['action']) && isset($_GET['id']))
 			{
 			$table = "social";
@@ -162,31 +140,51 @@ if(isset($_POST['EditSocial']))
 						<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
 						  <fieldset>
                            <input type="hidden" name="ID" value="<?php echo $display['ID']; ?>" />
-                          
                                <div class="control-group">
-								<label class="control-label" for="focusedInput">Social Name</label>
+								<label class="control-label" for="focusedInput"> Company Name</label>
 								<div class="controls">
-								  <input class="input-xlarge focused" id="focusedInput" type="text" name="SocialName"  required="required" placeholder="Enter Product Name" 
-                      value="<?php if(isset($display['Socialname'])){echo $display['Socialname'];} ?>" />
+								  <input class="input-xlarge focused" id="focusedInput" type="text" name="SocialName"  required="required" placeholder="Enter Product Name" value="<?php if(isset($display['C_Name'])){echo $display['C_Name'];} ?>" />
 								</div>
 							  </div>
                               
                                <div class="control-group">
-								<label class="control-label" for="focusedInput">Social Link</label>
+								<label class="control-label" for="focusedInput">About US</label>
 								<div class="controls">
-								  <input class="input-xlarge focused" id="focusedInput" type="text" name="SocialLink"  required="required" placeholder="Enter Product Name" 
-                      value="<?php if(isset($display['Sociallink'])){echo $display['Sociallink'];} ?>" />
+								  <textarea class="input-xlarge focused" id="focusedInput" type="text" name="SocialLink"  required="required" >
+									<?php if(isset($display['About_Us'])){echo $display['About_Us'];} ?>" </textarea>
 								</div>
 							  </div>
                               
+                               <div class="control-group">
+								<label class="control-label" for="focusedInput">Achivments</label>
+								<div class="controls">
+								  <textarea class="input-xlarge focused" id="focusedInput" type="text" name="Achivments"  required="required" 
+									><?php if(isset($display['Achivements'])){echo $display['Achivements'];} ?></textarea>
+								</div>
+							  </div>
+							  
                             <div class="control-group">
-							  <label class="control-label" for="fileInput"> Social Image<label>
+							  <label class="control-label" for="fileInput"> Profile Image<label>
 							  <div class="controls">
-								<input class="input-file uniform_on" id="fileInput" type="file" name="SocialImage">
+								<input class="input-file uniform_on" id="fileInput" type="file" name="PImage">
                                 
-                      <input type="hidden" name="img" value="<?php echo $display['Socialimage']; ?>" />
+                      <input type="hidden" name="pimg" value="<?php echo $display['P_Image']; ?>" />
 							  </div>
-							</div> 
+							</div>
+							<div class="control-group">
+							  <label class="control-label" for="fileInput">Cover Image<label>
+							  <div class="controls">
+								<input class="input-file uniform_on" id="fileInput" type="file" name="CImage">
+								<input type="hidden" name="cimg" value="<?php echo $display['C_Image']; ?>" />
+							  </div>
+							</div>							
+							<div class="control-group">
+							  <label class="control-label" for="fileInput">Achivments Image<label>
+							  <div class="controls">
+								<input class="input-file uniform_on" id="fileInput" type="file" name="AImage">
+								<input type="hidden" name="aimg" value="<?php echo $display['A_Image']; ?>" />
+							  </div>
+							</div>
 							<div class="form-actions">
 							  <button type="submit" class="btn btn-primary" name="EditSocial">Edit Social</button>
 							  <button type="reset" class="btn">Cancel</button>
